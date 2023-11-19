@@ -1,2 +1,9 @@
+dist/
+build/
+*.spec
+
+_internal/
+*.exe
+
 test/
 *.png
