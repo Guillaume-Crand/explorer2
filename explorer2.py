@@ -17,8 +17,10 @@ class Display:
         # pygame.display.toggle_fullscreen()
         pygame.display.set_caption("explorer2")
 
-        programIcon = pygame.image.load("icon.png")
-        pygame.display.set_icon(programIcon)
+        ICONFILE = "icon.png"
+        if Path(ICONFILE).exists():
+            programIcon = pygame.image.load(ICONFILE)
+            pygame.display.set_icon(programIcon)
 
         self.WIDTH, self.HEIGHT = self.screen.get_size()
         self.BTN_WIDTH = 200
